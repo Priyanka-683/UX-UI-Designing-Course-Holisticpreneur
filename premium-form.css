@@ -1,0 +1,1082 @@
+:root {
+
+    --dark: #1e272e;
+    --purple: #6c5ce7;
+    --light-purple: #a29bfe;
+    --pink: #fd79a8;
+    --blue: #74b9ff;
+
+    --glass: rgba(255,255,255,0.88);
+
+}
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f5ff,
+            #fff7fb
+        );
+
+    font-family: 'Outfit', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--dark);
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-btn {
+
+    position: fixed;
+
+    top: 25px;
+    left: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: var(--dark);
+
+    font-weight: 600;
+
+    padding: 11px 20px;
+
+    background:
+        rgba(255,255,255,0.75);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 50px;
+
+    border:
+        1px solid rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.06);
+
+    z-index: 1000;
+
+    transition: 0.3s;
+
+}
+
+
+.back-btn:hover {
+
+    background: var(--dark);
+
+    color: white;
+
+    transform: translateX(-5px);
+
+}
+
+
+
+/* =========================
+   SECTION
+========================= */
+
+.ultra-form-section {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 70px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =========================
+   ORBS
+========================= */
+
+.orb {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: 0.45;
+
+    z-index: -1;
+
+    animation: floatOrb 9s infinite alternate ease-in-out;
+
+}
+
+
+.orb-1 {
+
+    width: 430px;
+    height: 430px;
+
+    background: #b8b0ff;
+
+    top: -150px;
+    left: -120px;
+
+}
+
+
+.orb-2 {
+
+    width: 400px;
+    height: 400px;
+
+    background: #ffc2da;
+
+    bottom: -150px;
+    right: -120px;
+
+}
+
+
+@keyframes floatOrb {
+
+    from {
+
+        transform:
+            translate(0,0);
+
+    }
+
+    to {
+
+        transform:
+            translate(35px,45px);
+
+    }
+
+}
+
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.form-card {
+
+    width: 100%;
+
+    max-width: 1150px;
+
+    display: flex;
+
+    background:
+        var(--glass);
+
+    backdrop-filter:
+        blur(30px);
+
+    border:
+        1px solid rgba(255,255,255,0.8);
+
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 40px 100px
+        rgba(58,40,100,0.12);
+
+    animation:
+        cardAppear 0.9s ease;
+
+}
+
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.form-sidebar {
+
+    width: 40%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #20232a,
+            #302846
+        );
+
+    color: white;
+
+    padding: 60px 50px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.mini-tag {
+
+    color: var(--light-purple);
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.side-title {
+
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size:
+        clamp(2.3rem, 4vw, 3.5rem);
+
+    line-height: 1.08;
+
+    margin: 22px 0;
+
+}
+
+
+.side-title i {
+
+    color: var(--light-purple);
+
+    font-weight: 400;
+
+}
+
+
+.sidebar-content > p {
+
+    color:
+        rgba(255,255,255,0.68);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* COURSE POINTS */
+
+.course-points {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.course-points div {
+
+    color:
+        rgba(255,255,255,0.8);
+
+    font-size: 0.9rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.course-points span {
+
+    color:
+        var(--light-purple);
+
+}
+
+
+
+/* TRUST */
+
+.trust-pill {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    padding: 10px 16px;
+
+    border-radius: 50px;
+
+    font-size: 0.75rem;
+
+    margin-top: 30px;
+
+}
+
+
+.dot-live {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        #55efc4;
+
+    box-shadow:
+        0 0 12px #55efc4;
+
+}
+
+
+
+/* =========================
+   FORM SIDE
+========================= */
+
+.form-main {
+
+    width: 60%;
+
+    padding: 55px;
+
+    background: white;
+
+}
+
+
+.form-heading {
+
+    margin-bottom: 30px;
+
+}
+
+
+.form-heading > span {
+
+    color: var(--purple);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.form-heading h2 {
+
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size:
+        clamp(2rem, 3vw, 2.8rem);
+
+    line-height: 1.1;
+
+    margin: 10px 0;
+
+}
+
+
+.form-heading h2 em {
+
+    color: var(--purple);
+
+    font-weight: 400;
+
+}
+
+
+.form-heading p {
+
+    color: #777;
+
+    font-size: 0.9rem;
+
+}
+
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.input-row {
+
+    margin-bottom: 18px;
+
+}
+
+
+.input-row.split {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+.input-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.input-field label {
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: #555;
+
+    letter-spacing: 0.4px;
+
+}
+
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border:
+        1.5px solid #ededed;
+
+    background:
+        #fafafa;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: 'Outfit', sans-serif;
+
+    font-size: 0.92rem;
+
+    color: #222;
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.input-field textarea {
+
+    resize: vertical;
+
+    min-height: 80px;
+
+}
+
+
+.input-field input:focus,
+.input-field select:focus,
+.input-field textarea:focus {
+
+    border-color:
+        var(--purple);
+
+    background:
+        white;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(108,92,231,0.08);
+
+}
+
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.prime-btn {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 17px 22px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e272e,
+            #40375d
+        );
+
+    color: white;
+
+    font-family: 'Outfit';
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    transition:
+        0.35s ease;
+
+    margin-top: 8px;
+
+}
+
+
+.prime-btn:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            #8b5cf6
+        );
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(108,92,231,0.25);
+
+}
+
+
+.prime-btn span {
+
+    font-size: 1.3rem;
+
+    transition: 0.3s;
+
+}
+
+
+.prime-btn:hover span {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+.prime-btn:disabled {
+
+    opacity: 0.7;
+
+    cursor: wait;
+
+    transform: none;
+
+}
+
+
+
+/* PRIVACY */
+
+.privacy-note {
+
+    text-align: center;
+
+    font-size: 0.7rem;
+
+    color: #999;
+
+    margin-top: 12px;
+
+}
+
+
+
+/* =========================
+   SUCCESS OVERLAY
+========================= */
+
+.overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(20,18,30,0.65);
+
+    backdrop-filter:
+        blur(10px);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 9999;
+
+}
+
+
+.success-modal {
+
+    width: 90%;
+
+    max-width: 430px;
+
+    background: white;
+
+    padding: 45px 35px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 40px 100px
+        rgba(0,0,0,0.2);
+
+    animation:
+        modalPop 0.5s ease;
+
+}
+
+
+@keyframes modalPop {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.8)
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+.success-icon {
+
+    font-size: 3.5rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+.success-modal h2 {
+
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size: 2rem;
+
+    margin-bottom: 12px;
+
+}
+
+
+.success-modal p {
+
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 8px;
+
+}
+
+
+.close-btn {
+
+    margin-top: 20px;
+
+    border: none;
+
+    background:
+        var(--purple);
+
+    color: white;
+
+    padding: 13px 28px;
+
+    border-radius: 50px;
+
+    font-family: 'Outfit';
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.close-btn:hover {
+
+    background: var(--dark);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+
+/* =========================
+   ENROLLMENT POPUP
+========================= */
+
+.enrollment-popup {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 25px;
+
+    background: white;
+
+    padding: 11px 17px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,0.12);
+
+    border:
+        1px solid #eee;
+
+    z-index: 5000;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    transform:
+        translateX(-100px);
+
+    transition:
+        0.6s cubic-bezier(
+            0.175,
+            0.885,
+            0.32,
+            1.275
+        );
+
+}
+
+
+.enrollment-popup.active {
+
+    visibility: visible;
+
+    opacity: 1;
+
+    transform:
+        translateX(0);
+
+}
+
+
+.popup-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.user-avatar {
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background:
+        var(--purple);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+
+}
+
+
+.popup-text p {
+
+    margin: 0;
+
+    font-size: 0.85rem;
+
+    color: #333;
+
+}
+
+
+.popup-text strong {
+
+    color:
+        var(--purple);
+
+}
+
+
+.popup-tag {
+
+    font-size: 0.65rem;
+
+    color:
+        #2ecc71;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .ultra-form-section {
+
+        padding:
+            90px 20px 30px;
+
+    }
+
+
+    .form-card {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .form-sidebar,
+    .form-main {
+
+        width: 100%;
+
+    }
+
+
+    .form-sidebar {
+
+        padding:
+            45px 35px;
+
+    }
+
+
+    .form-main {
+
+        padding:
+            40px 30px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .back-btn {
+
+        top: 15px;
+        left: 15px;
+
+        padding:
+            8px 14px;
+
+        font-size:
+            0.78rem;
+
+    }
+
+
+    .input-row.split {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .side-title {
+
+        font-size:
+            2.2rem;
+
+    }
+
+
+    .form-main {
+
+        padding:
+            30px 20px;
+
+    }
+
+
+    .form-sidebar {
+
+        padding:
+            35px 25px;
+
+    }
+
+
+    .enrollment-popup {
+
+        left: 15px;
+        bottom: 15px;
+
+        max-width:
+            calc(100% - 30px);
+
+    }
+
+}
